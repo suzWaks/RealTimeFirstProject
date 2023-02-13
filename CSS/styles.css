@@ -411,4 +411,58 @@ a{
       font-size: 1.6rem;
     }
   }
+
+  /* Grids */
+.grid {
+    display: grid;
+  }
+  
+  @media screen and (min-width: 768px) {        /*For tablets*/
+    .grid--1x2 {
+      grid-template-columns: repeat(2, 1fr); /* Same as 1fr 1fr*/
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {       /*For laptops*/
+    .grid--1x3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  
+/* Testimonials */
+.testimonial {
+    padding: 3rem;
+  }
+  
+  .testimonial__image {
+    position: relative;
+    margin: 0 3rem;
+  }
+  
+  .testimonial__image > img { /*Making Image responsive*/
+    width: 100%;
+  }
+  
+  .testimonial__image > .icon-container {
+    position: absolute;
+    top: 3rem;
+    right: -32px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .testimonial__image {
+      margin: 0;
+    }
+  
+    .testimonial .quote,
+    .testimonial .quote__author {
+      font-size: 2.4rem;
+    }
+  
+    .testimonial .quote {
+      margin-left: 6rem;
+      margin-right: 0;
+    }
+  }
   
